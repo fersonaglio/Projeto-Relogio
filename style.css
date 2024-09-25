@@ -2,6 +2,8 @@ html, body {
   background-color: #aaa;
   margin: 0;
   padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 .relogio {
@@ -26,8 +28,23 @@ html, body {
 }
 
 footer {
-  font-size: 1rem;
-  margin-top: 50px;
-  color: black;
-  font-family: "Barlow Condensed", sans-serif;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #444;
+  padding: 20px;
+}
+
+@media (max-width: 500px) {
+  .display {
+    max-width: 80%;
+    max-height: 90%;
+    font-size: 20vh;
+  }
+
+  footer {
+    margin: 0 auto;
+  }
 }
